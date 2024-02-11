@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --background-color: #f3eae3;
+    --background-color-secondary: #ffffff;
+    --font-primary: 'Montserrat', sans-serif;
+    --background-color-third-party:#6c6e7b;
+    --background-color-primary: #1c2228;
+    --background-color-button: #1a4031;
+    --background-color-button-primary:#3d8168;
+    --font-secondary: 'Fraunces', serif;
+    --colo-font-value: #418169;
+}
+
+body{
+    box-sizing: border-box;
+    background-color: var(--background-color);
+    font-family: var(--font-primary);
+}
+
+.main{
+    display: flex;
+    overflow: hidden;
+}
+
+.main-container{
+    background-color: var(--background-color-secondary);
+    position: absolute;
+    max-width: 700px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 17px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    overflow: hidden;
+    justify-content: end;
+    justify-items: end;
+}
+
+.main-img{
+    background-image: url("../img/image-product-desktop.jpg");
+    background-size: cover;
+    width: 21.8em;
+    border-radius: 1em 0em 0em 1em;
+}
+
+.main-container-description{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2em;
+    gap: 1em;
+}
+
+.type-perfume{
+    color: var(--background-color-third-party);
+    letter-spacing: 0.29em;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+    font-size: 0.8em;
+}
+
+.main-container-title{
+    font-family: var(--font-secondary);
+    font-size: 2.1em;
+    font-weight: 700;
+    color: var(--background-color-primary);
+    margin-bottom: 0.4em;
+}
+
+.main-container-text{
+    color: var(--background-color-third-party);
+    line-height: 1.6em;
+}
+
+.main-container-money{
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.6em;
+}
+
+.main-money-value{
+    color: var(--colo-font-value);
+    font-size: 1.8em;
+    font-family: var(--font-secondary);
+    padding-right: 1.5em;
+}
+
+.main-money-value-descont{
+    color: var(--background-color-third-party);
+    text-decoration: line-through;
+}
+
+.main-button{
+    display: flex;
+    justify-content: center;
+    font-family: var(--font-secondary);
+    color: var(--background-color-secondary);
+    font-weight: 700;
+    background-color: var(--background-color-button-primary);
+    border: 0;
+    padding: 1.2em;
+    border-radius: 0.8em;
+    text-decoration: none;
+}
+
+.main-button:hover{
+    cursor: pointer;
+    background-color: var(--background-color-button);
+}
+
+.main-button-text{
+    padding-left: 1em;
+}
+
+.footer{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 1em;
+}
+
+.footer-text{
+    text-align: center;
+    font-size: 1.1em;
+}
+
+
+@media (max-width: 414px){
+    .main-container{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+    .main-img{
+        width: 100%;
+        height: 15.6em;
+        background-image: url("../img/image-product-mobile.jpg");
+        border-radius: 1em 1em 0 0;
+    }
+    .main-container-description{    
+        gap: 0.9em;
+    }
+
+}
